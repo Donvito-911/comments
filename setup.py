@@ -7,13 +7,13 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
-VERSION = '0.0.0'
+VERSION = '0.0.1'
 DESCRIPTION = 'Social Media miner comments'
-LONG_DESCRIPTION = 'A package that allows to recolect in databases the comments of user in facebook, instagram and twitter posts'
+LONG_DESCRIPTION = 'A package that allows to recolect in databases the comments of users in facebook, instagram and twitter posts'
 
 # Setting up
 setup(
-    name="comment",
+    name="comments",
     version=VERSION,
     author="Donvito (Daniel Aguirre)",
     author_email="<danielaguirre722@gmail.com>",

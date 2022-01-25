@@ -29,7 +29,7 @@ def require_token(fn):
         BEARER_TOKEN = import_token("twitter")
         if not BEARER_TOKEN:
             class BearerToken(Exception): pass
-            raise BearerToken("You haven't set up your bearer token, you must import set_tokens or set_token and set a bearer token")
+            raise BearerToken("You haven't set up your bearer token, you must import set_tokens or set_token and set a bearer token in order to interact with the Twitter API")
         else:
             return fn(*args,**kwargs)
     return wrapper

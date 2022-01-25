@@ -3,14 +3,19 @@ from .decorators import manage_response, require_token
 import requests
 
 class TwitterApiRequest:
-    @classmethod
-    @manage_response
+    def _get_data(self, tweet_id: str, kwargs: dict):
+        json = self.__get_request(tweet_id, kwargs)
+        replies, users = json["data"], json["includes"]["users"]
+        users_dict = {user["id"]: user for user in users}
+        return replies, users, users_dict
+    
     @require_token
-    def get_replies(cls, tweet_id, kwargs: dict):
+    @manage_response
+    def __get_request(self, tweet_id, kwargs: dict):
         academic_mode, max_replies, bearer_token = kwargs.get("academic_mode", False), kwargs.get("max_replies",10), import_token("twitter")
                                                     
-        url = cls.__create_url(tweet_id, max_replies, academic_mode)
-        request = requests.get(url, headers = cls.__create_headers(bearer_token))
+        url = self.__create_url(tweet_id, max_replies, academic_mode)
+        request = requests.get(url, headers = self.__create_headers(bearer_token))
         return request
     
     @staticmethod
