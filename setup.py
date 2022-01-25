@@ -21,7 +21,7 @@ setup(
     long_description_content_type="text/markdown",
     long_description=long_description,
     packages=find_packages(),
-    install_requires=['requests', 'pandas','functools'],
+    install_requires=['requests', 'pandas'],
     keywords=['python', 'comments', 'social media', 'twitter', 'facebook', 'instagram'],
     classifiers=[
         "Development Status :: 1 - Planning",
