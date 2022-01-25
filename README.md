@@ -1,13 +1,13 @@
-# Welcome to Comments miner!
+# Bienvenido al paquete de Comments!
 
 
-## 1. Package installation
+## 1. Instalación de paquetes
     pip install git+https://github.com/Donvito-911/comments.git
 - Debe tener instalado pip (ya sea a través de Anaconda o directamente)
 - Si tiene anaconda abra la terminal (macOS) o anaconda prompt (Windows) y copie y corra el comando allí.
 
-## 2. Guide
-   1. [Twitter](#twitter) <br/>
+## 2. Guía
+   1. [Twitter](#twitter) <br/>
    2. [Facebook](#facebook) <br/>
    3. [Ejemplos](#ejemplos) <br/>
 
