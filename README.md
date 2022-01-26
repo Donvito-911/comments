@@ -42,3 +42,12 @@ Nota: Si no se agregó el argumento de username, el dataframe retorna None en la
 ## Facebook <a id ="facebook"/> 
 En construcción
 ## Ejemplos <a id ="ejemplos"/> 
+Utilicemos el siguiente tweet de la senadora Paloma Valencia: https://twitter.com/PalomaValenciaL/status/1475855736202842121
+- primero debemos cargar nuestro bearer token:<br/>
+`set_twitter_token(<su_bearer_token>)`
+- Ahora corramos el siguiente código
+```
+   tweet_paloma = Tweet(1484188333496541184,username="PalomaValenciaL", max_replies = 100)
+   tweet_paloma_valencia.get_dataframe()
+   ```
+
